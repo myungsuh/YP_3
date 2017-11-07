@@ -6,4 +6,4 @@ variable1.close
 
 variable2 = File.read("Greatness.rb")
 
-puts "Data From File:" + variable2
+puts "Data From File: " + variable2

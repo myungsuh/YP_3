@@ -1,5 +1,4 @@
 puts "Enter a value"
-
 fun = gets.to_i
 
 while fun <= 10

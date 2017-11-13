@@ -1,31 +1,36 @@
 class Dog
-  attr_accessor :name :breed :age :height :weight
+  attr_accessor :name, :breed, :age, :height
 
   def initialize
-    puts "Hello, you are now creating an animal"
+    puts "\nHello, you are now creating your dog."
   end
+end
 
-  def name(new_name)
-    @name = gets.chomp
-  end
+puts "Press Enter to Begin"
+enter = gets.chomp
 
-  def breed(new_breed)
-    @breed = gets.chomp
-  end
+dog = Dog.new
+puts "\n\nWhat would you like to name your dog?"
+dog.name = gets.chomp
 
-  def age(new_age)
-    @age = gets.chomp
-  end
+puts "\n\nWhat would you like your dog's breed to be?"
+dog.breed = gets.chomp
 
-  def height(new_height)
-    @height = gets.chomp
-  end
+puts "\n\nHow old is your dog"
+dog.age = gets.chomp
 
-  def weight(new_weight)
-    @weight = gets.chomp
-  end
+puts "\n\nHow tall is your dog?"
+dog.height = gets.chomp
 
-puts "What is the name of your dog?"
-dog1 = Dog.new
+puts "\n\nYou have been successful in creating your dog!"
+puts "Press Enter to Continue"
 
-dog1
+enter = gets.chomp
+
+conclusion = <<EOM
+\nSay hello to you new dog #{dog.name}.
+He is a #{dog.breed}. #{dog.name} is #{dog.age} years old and he is #{dog.height}cm tall.
+I hope you enjoy hanging out with #{dog.name}
+EOM
+
+puts conclusion
